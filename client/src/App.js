@@ -50,6 +50,9 @@ function App() {
           <Route path="/" exact>
              <Pokedex token = {token} loggedIn = {loggedIn}/>
              </Route>
+            <Route path="/pokedex-project" exact>
+             <Pokedex token = {token} loggedIn = {loggedIn}/>
+             </Route>
           <Route path="/team">
           {loggedIn ?  <PokemonTeam token={token}/> : <p>Please log in to continue.</p>}
           </Route>

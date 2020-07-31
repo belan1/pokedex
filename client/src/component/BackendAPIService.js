@@ -1,5 +1,6 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:5000/api/user'
+const PORT = process.env.PORT || 5000;
+const baseUrl = 'https://mighty-falls-98273.herokuapp.com:' + PORT + '/api/user'
 
 const getUser = async (token) => {
   const request = axios.get(baseUrl + '/auth', {headers: { "poke-jwt" : token}})
