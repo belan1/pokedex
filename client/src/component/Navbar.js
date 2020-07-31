@@ -7,11 +7,11 @@ export default function Navbar({loggedIn, user, logout}) {
         <header className="header">
         <nav className="nav">
             <ul className="nav-links">
-                <Link to="/pokedex-project/">
+                <Link to="/">
                 <li>Pokedex</li>
                 </Link>
 
-                <Link to="/pokedex-project/team">
+                <Link to="/team">
                 <li>Team</li>
                 </Link>
             </ul>
@@ -21,13 +21,13 @@ export default function Navbar({loggedIn, user, logout}) {
         {loggedIn ? <div className="navright" ><p>Welcome, {user}</p><div style={{margin: '5%'}}><Button variant="secondary" onClick={() => logout()}>Logout</Button></div></div> : 
         <div className="navright">
             <div>
-            <Link to="/pokedex-project/login">
+            <Link to="/login">
             <div><Button variant="secondary" className="mr-2">Login</Button></div>
             </Link>
             </div>
 
             <div>
-            <Link to="/pokedex-project/register">
+            <Link to="/register">
             <div><Button variant="secondary" className="mr-2">Register</Button></div>
             </Link></div></div>}</div>
 

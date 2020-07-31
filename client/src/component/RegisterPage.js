@@ -34,7 +34,7 @@ export default function RegisterPage({setToken}) {
 
     return (
         <div>
-            {loggedIn ? <Redirect to="/pokedex-project/" component={App}/> : <div/>}
+            {loggedIn ? <Redirect to="/" component={App}/> : <div/>}
             <h2>Register</h2>
             {invalid ? <div>invalid credentials</div> : <div />}
             <form onSubmit= {event => submitUserDetails(event)}>

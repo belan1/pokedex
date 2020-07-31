@@ -47,16 +47,16 @@ function App() {
       <div className="App">
         <Navbar loggedIn={loggedIn} user={user} logout={logout}/>
         <Switch>
-          <Route path="/pokedex-project/" exact>
+          <Route path="/" exact>
              <Pokedex token = {token} loggedIn = {loggedIn}/>
              </Route>
-          <Route path="/pokedex-project/team">
+          <Route path="/team">
           {loggedIn ?  <PokemonTeam token={token}/> : <p>Please log in to continue.</p>}
           </Route>
-          <Route path="/pokedex-project/login">
+          <Route path="/login">
             <LoginPage setToken={setToken}/>
           </Route>
-          <Route path="/pokedex-project/register">
+          <Route path="/register">
             <RegisterPage setToken={setToken}/>
           </Route>
         </Switch>

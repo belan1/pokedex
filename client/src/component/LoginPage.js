@@ -34,7 +34,7 @@ export default function LoginPage({setToken}) {
 
     return (
         <div>
-            {loggedIn ? <Redirect to="/pokedex-project/" component={App}/> : <div/>}
+            {loggedIn ? <Redirect to="/" component={App}/> : <div/>}
             <h2>Login</h2>
             {invalid ? <div>invalid credentials</div> : <div />}
             <form onSubmit= {event => submitUserDetails(event)}>
