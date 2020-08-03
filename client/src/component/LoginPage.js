@@ -33,15 +33,23 @@ export default function LoginPage({setToken}) {
     }
 
     return (
+        <div className="container">
         <div>
             {loggedIn ? <Redirect to="/" component={App}/> : <div/>}
             <h2>Login</h2>
             {invalid ? <div>invalid credentials</div> : <div />}
             <form onSubmit= {event => submitUserDetails(event)}>
+                <div className="row">
                 <label>name</label><input type = "text" name= "name" onChange={handleNameChange}/>
+                </div>
+                <div className="row">
                 <label>password</label><input type = "password" name= "password" onChange={handlePasswordChange}/>
+                </div>
+                <div className="row">
                 <Button variant="primary" className="mr-2" type="submit">Submit</Button>
+                </div>
             </form>
+        </div>
         </div>
     )
 }
